@@ -4,8 +4,44 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <p>holaa</p>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - git1</title>
+    
+    <!-- Enlaces a los estilos de Bootstrap y otros archivos CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+
+    <!-- Contenedor principal con texto centrado -->
+    <div class="container text-center my-5">
+        <h1 class="display-4 text-primary">¡Bienvenido a Git1!</h1>
+        <p class="lead">Explora cómo construir aplicaciones web con <a href="https://learn.microsoft.com/aspnet/core" target="_blank" class="text-decoration-none text-info">ASP.NET Core</a>.</p>
+
+        <!-- Un pequeño bloque de texto introductorio -->
+        <p class="mt-3">¡Hola! Este es tu punto de partida para aprender sobre desarrollo web con ASP.NET Core.</p>
+
+        <!-- Botón de llamada a la acción -->
+        <a href="https://learn.microsoft.com/aspnet/core" class="btn btn-lg btn-primary mt-4" target="_blank">
+            Comienza a aprender
+        </a>
+    </div>
+
+    <!-- Pie de página con información adicional -->
+    <footer class="footer bg-light text-muted py-3">
+        <div class="container text-center">
+            <p class="mb-0">© 2024 - Git1 | Todos los derechos reservados.</p>
+            <p><a href="@Url.Page("/Privacy")" class="text-decoration-none text-muted">Política de Privacidad</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts necesarios para el funcionamiento de Bootstrap -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

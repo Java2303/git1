@@ -1,60 +1,76 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - git1</title>
+
+    <!-- CSS de Bootstrap -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- CSS personalizado -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/git1.styles.css" asp-append-version="true" />
 </head>
 <body>
+    <!-- Encabezado de la página con la barra de navegación -->
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">git1</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <!-- Logo/Nombre de la empresa con enlace -->
+                <a class="navbar-brand" href="@Url.Page("/Index")">git1</a>
+
+                <!-- Botón para la navegación en dispositivos móviles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+
+                <!-- Menú de navegación -->
+                <div class="navbar-collapse collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Agregamos 'ms-auto' para alinear los items a la derecha -->
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark" href="@Url.Page("/Index")">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-dark" href="@Url.Page("/Privacy")">Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Contactos">Contacto</a>
+                            <a class="nav-link text-dark" href="@Url.Page("/Contactos")">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Servicios">Servicios</a>
+                            <a class="nav-link text-dark" href="@Url.Page("/Servicios")">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Acerca de">Nosotros</a>
+                            <a class="nav-link text-dark" href="@Url.Page("/Acerca_de")">Nosotros</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
+    <!-- Contenido principal de la página -->
+    <main role="main" class="container">
+        @RenderBody() <!-- Se renderiza el contenido específico de cada página -->
+    </main>
+
+    <!-- Pie de página -->
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - git1 - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2024 - git1 - <a href="@Url.Page("/Privacy")">Privacy</a>
         </div>
     </footer>
 
+    <!-- Scripts necesarios para el funcionamiento de Bootstrap y jQuery -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts personalizados -->
     <script src="~/js/site.js" asp-append-version="true"></script>
 
+    <!-- Para agregar scripts adicionales específicos de las páginas -->
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

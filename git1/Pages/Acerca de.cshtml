@@ -1,6 +1,109 @@
 ﻿@page
 @model git1.Pages.Acerca_deModel
 @{
+    ViewData["Title"] = "Acerca de Nosotros";
 }
-<p>somos nosotros</p>
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        /* Estilos generales de la página */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+            .about-section p {
+                font-size: 1.2em;
+                color: #34495e;
+                line-height: 1.6;
+                margin: 20px 0;
+            }
+
+            .about-section img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 20px;
+            }
+
+        .team-info {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            margin-top: 30px;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+            .team-info h2 {
+                font-size: 1.8em;
+                color: #e67e22;
+            }
+
+            .team-info ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+
+                .team-info ul li {
+                    margin: 10px 0;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Acerca de Nosotros</h1>
+        <div class="about-section">
+            <!-- Imagen de la empresa o equipo -->
+            <img src="https://via.placeholder.com/120" alt="Imagen de equipo o empresa">
+
+            <p>Somos un equipo apasionado por ofrecer soluciones innovadoras y confiables a nuestros clientes. Con años de experiencia en el sector, nos dedicamos a brindar servicios de alta calidad con un enfoque en la seguridad, el compromiso y la satisfacción.</p>
+
+            <p>En nuestra empresa, cada miembro del equipo juega un papel crucial para lograr nuestros objetivos. Creemos en el trabajo en equipo y en crear un ambiente que fomente la creatividad y la excelencia.</p>
+        </div>
+
+        <div class="team-info">
+            <h2>Conoce a Nuestro Equipo</h2>
+            <ul>
+                <li><strong>Juan Pérez</strong> - CEO & Fundador</li>
+                <li><strong>María López</strong> - Directora de Operaciones</li>
+                <li><strong>Carlos García</strong> - Director de Marketing</li>
+                <li><strong>Laura Sánchez</strong> - Responsable de Atención al Cliente</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
